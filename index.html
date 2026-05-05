@@ -239,6 +239,42 @@ code{font-family:var(--mono);background:var(--sf2);padding:1px 5px;border-radius
 .pr-badge-inv{background:rgba(108,92,231,.12);color:var(--ac2)}
 .pr-pill{font-size:10px;padding:1px 6px;border-radius:10px;background:var(--sf2);border:0.5px solid var(--bd);color:var(--mu);font-family:var(--mono);display:inline-block;margin:1px}
 .pr-sm{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-bottom:1.2rem}
+/* CONVERGENCIA */
+.cv-day{background:var(--sf2);border-radius:var(--r);padding:.85rem 1rem;margin-bottom:.75rem}
+.cv-day-title{font-size:10px;font-weight:500;color:var(--mu);text-transform:uppercase;letter-spacing:.08em;margin-bottom:.6rem}
+.cv-lot-row{display:flex;gap:5px;flex-wrap:wrap;margin-bottom:5px}
+.cv-lot-box{display:flex;flex-direction:column;gap:2px;align-items:center}
+.cv-lot-box span{font-size:9px;color:var(--mu);text-align:center;max-width:58px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.cv-lot-box input{width:60px;text-align:center;font-family:var(--mono);font-size:11px;height:28px;padding:0 3px;background:var(--sf);border:0.5px solid var(--bd2);border-radius:6px;color:var(--tx)}
+.cv-grid{display:grid;grid-template-columns:repeat(10,1fr);gap:3px;margin:1rem 0}
+.cv-cell{aspect-ratio:1;border-radius:6px;display:flex;flex-direction:column;align-items:center;justify-content:center;border:0.5px solid transparent;transition:transform .12s;cursor:default}
+.cv-cell:hover{transform:scale(1.15);z-index:10}
+.cv-cn{font-family:var(--mono);font-size:10px;font-weight:500;line-height:1}
+.cv-cs{font-size:8px;line-height:1;margin-top:1px}
+.cv-s0{background:var(--sf2);color:var(--mu2);border-color:var(--bd)}
+.cv-s1{background:rgba(100,100,220,.1);color:#7777cc}
+.cv-s2{background:rgba(100,100,220,.18);color:#6666bb}
+.cv-s3{background:rgba(255,179,71,.18);color:#cc8800;border-color:rgba(255,179,71,.3)}
+.cv-s4{background:rgba(255,179,71,.28);color:#bb7700;border-color:rgba(255,179,71,.4)}
+.cv-s5{background:rgba(255,120,50,.25);color:#cc5500;border-color:rgba(255,120,50,.35)}
+.cv-s6{background:rgba(255,85,85,.2);color:#cc2222;border-color:rgba(255,85,85,.3)}
+.cv-s7{background:rgba(255,85,85,.32);color:#aa0000;border-color:rgba(255,85,85,.45)}
+.cv-s8{background:#E24B4A;color:#fff;border-color:#c03030;box-shadow:0 2px 6px rgba(226,75,74,.35)}
+.cv-s9{background:#c02000;color:#fff;border-color:#991100;box-shadow:0 2px 8px rgba(180,20,0,.4)}
+.cv-s10{background:#8B0000;color:#fff;border-color:#660000;box-shadow:0 3px 10px rgba(130,0,0,.5)}
+.cv-cand{background:var(--sf);border:0.5px solid var(--bd);border-radius:var(--rl);padding:.85rem 1rem;display:flex;align-items:flex-start;gap:12px}
+.cv-cand.cv-hot{border-color:var(--ro-bd);background:linear-gradient(135deg,rgba(255,85,85,.05),transparent)}
+.cv-cand.cv-warm{border-color:var(--na-bd)}
+.cv-cand-num{font-family:var(--mono);font-size:30px;font-weight:500;min-width:44px;line-height:1}
+.cv-badge{font-size:9px;padding:2px 7px;border-radius:10px;text-transform:uppercase;letter-spacing:.06em;font-weight:500;display:inline-block;margin:1px}
+.cv-b-hot{background:var(--ro-bg);color:var(--ro)}
+.cv-b-warm{background:var(--na-bg);color:var(--na)}
+.cv-b-mig{background:var(--gr-bg);color:var(--gr)}
+.cv-b-cerco{background:rgba(108,92,231,.15);color:var(--ac2)}
+.cv-legend{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:.6rem;align-items:center}
+.cv-leg{display:flex;align-items:center;gap:3px;font-size:10px;color:var(--mu)}
+.cv-leg-box{width:12px;height:12px;border-radius:3px}
+
 /* PALES */
 .pa-tabs{display:flex;gap:6px;margin-bottom:1.25rem}
 .pa-tab{padding:6px 16px;border-radius:20px;border:0.5px solid var(--bd2);background:transparent;color:var(--mu);font-size:13px;font-weight:500;cursor:pointer;font-family:var(--sans)}
@@ -276,6 +312,7 @@ code{font-family:var(--mono);background:var(--sf2);padding:1px 5px;border-radius
       <button class="ni" data-pg="prediccion" onclick="go('prediccion',this)"><span class="ni-ic">◉</span>Predicción diaria</button>
       <button class="ni" data-pg="predlot" onclick="go('predlot',this)"><span class="ni-ic">◎</span>Pred. por lotería</button>
       <button class="ni" data-pg="pales" onclick="go('pales',this)"><span class="ni-ic">⬡</span>Pálés y tripletas</button>
+      <button class="ni" data-pg="convergencia" onclick="go('convergencia',this)"><span class="ni-ic">◎</span>Convergencia</button>
       <button class="ni" data-pg="secuencias" onclick="go('secuencias',this)"><span class="ni-ic">〜</span>Secuencias</button>
       <button class="ni" data-pg="historial" onclick="go('historial',this)"><span class="ni-ic">◷</span>Historial</button>
       <button class="ni" data-pg="stats" onclick="go('stats',this)"><span class="ni-ic">◎</span>Estadísticas</button>
@@ -535,6 +572,31 @@ code{font-family:var(--mono);background:var(--sf2);padding:1px 5px;border-radius
       </div>
     </div>
 
+    <!-- CONVERGENCIA -->
+    <div class="pg" id="pg-convergencia">
+      <div class="ph">
+        <div><h1>Convergencia</h1><p>Detecta qué números están siendo "anunciados" por sus vecinos los días previos</p></div>
+        <div class="ph-act">
+          <button class="bt bt-g bt-sm" onclick="cvCargarSheet()">⬇ Cargar del Sheet</button>
+          <button class="bt bt-g bt-sm" onclick="cvEjemplo()">Ejemplo</button>
+          <button class="bt bt-p bt-sm" onclick="cvCalc()">◎ Analizar</button>
+        </div>
+      </div>
+      <div class="cd" style="margin-bottom:.75rem">
+        <div class="fg" style="flex-wrap:wrap;gap:10px">
+          <div class="fl" style="flex:2;min-width:180px"><label>Lotería objetivo</label><select id="cvLot" style="min-width:190px"></select></div>
+          <div class="fl"><label>Fecha de hoy</label><input type="date" id="cvFechaHoy" style="width:150px"></div>
+          <button class="bt bt-g" onclick="cvCargarSheet()">⬇ Cargar del Sheet</button>
+          <button class="bt bt-p" onclick="cvCalc()">◎ Analizar</button>
+        </div>
+        <div id="cvLoadStatus" style="font-size:12px;color:var(--mu);margin-top:8px"></div>
+      </div>
+      <div class="cv-day"><div class="cv-day-title">📅 Antes de ayer — todas las loterías</div><div id="cvD3"></div></div>
+      <div class="cv-day"><div class="cv-day-title">📅 Ayer — todas las loterías</div><div id="cvD2"></div></div>
+      <div class="cv-day"><div class="cv-day-title">📅 Hoy — todas las loterías (excepto la objetivo)</div><div id="cvD1"></div></div>
+      <div id="cvResult"></div>
+    </div>
+
     <!-- CONFIG -->
     <div class="pg" id="pg-cfg">
       <div class="ph"><div><h1>Configuración</h1><p>Conecta LotStat a tu Google Sheet</p></div></div>
@@ -655,6 +717,7 @@ function go(pg,btn){
   if(pg==='prediccion')prBuild();
   if(pg==='predlot'){plFill();plBuild();}
   if(pg==='pales'){paFillSelect();}
+  if(pg==='convergencia'){cvFill();cvBuildInputs();}
   if(pg==='secuencias'){fillS('sqLot');sqTop();}
   if(pg==='historial')fillS('hLot',true);
   if(pg==='stats'){fillS('sLot');renStats();}
@@ -1628,6 +1691,296 @@ async function previewWeb(tipo){
     <button class="bt bt-p bt-sm" onclick="importWeb('${tipo}')">⬇ Guardar todos</button>
     <button class="bt bt-g bt-sm" onclick="document.getElementById('importPreview').innerHTML=''">Cerrar</button>
   </div>`;
+}
+
+
+// ═══════════ CONVERGENCIA ═══════════
+const CV_GROUPS=[
+  ['ag8a','ag9a','h9','ag10a','h10','ag11','h11','ag12'],
+  ['LPd','LDOM','KinM','LS','R','Ld','GM'],
+  ['ag1p','ag2p','ag3p','NYt','ag4p','ag5p','h5','ag6p'],
+  ['LSn','H6','ag7p','LPn','H7','KinN','LT','ag8p'],
+  ['NC','NYn','FLt','FLn','Ag9p','Ag10p']
+];
+
+function cvFill(){
+  const sel=document.getElementById('cvLot');
+  if(sel&&sel.options.length<2){
+    Object.entries(LN).forEach(([c,n])=>{const o=document.createElement('option');o.value=c;o.textContent=n;sel.appendChild(o);});
+    sel.value='ag8a';
+  }
+  // Set today's date
+  const fe=document.getElementById('cvFechaHoy');
+  if(fe&&!fe.value) fe.value=new Date().toISOString().split('T')[0];
+}
+
+async function cvCargarSheet(){
+  if(!API)return toast('Conecta el Sheet primero en Configuración','err');
+  const st=document.getElementById('cvLoadStatus');
+  const fechaHoy=document.getElementById('cvFechaHoy').value;
+  if(!fechaHoy)return toast('Selecciona la fecha de hoy','err');
+
+  // Calculate yesterday and day before
+  const d0=new Date(fechaHoy);
+  const d1=new Date(d0); d1.setDate(d0.getDate()-1);
+  const d2=new Date(d0); d2.setDate(d0.getDate()-2);
+  const f0=fechaHoy;
+  const f1=d1.toISOString().split('T')[0];
+  const f2=d2.toISOString().split('T')[0];
+
+  st.textContent='⏳ Cargando '+f2+', '+f1+', '+f0+'...';
+
+  cvBuildInputs();
+
+  // Clear all inputs first
+  ['cvD3','cvD2','cvD1'].forEach(day=>{
+    CV_GROUPS.flat().forEach(code=>{
+      const e=document.getElementById(day+'_'+code);
+      if(e)e.value='';
+    });
+  });
+
+  // Load 3 days in parallel
+  const [rows0, rows1, rows2] = await Promise.all([
+    apig({action:'resultados', fecha:f0}),
+    apig({action:'resultados', fecha:f1}),
+    apig({action:'resultados', fecha:f2})
+  ]);
+
+  function fillDay(rows, day){
+    if(!Array.isArray(rows))return 0;
+    let count=0;
+    rows.forEach(r=>{
+      const e=document.getElementById(day+'_'+r.loteria_code);
+      if(!e)return;
+      const vals=[r.n1,r.n2,r.n3].filter(n=>n!==null&&n!==undefined&&n!=='').map(n=>String(n).padStart(2,'0'));
+      if(vals.length){e.value=vals.join(' ');count++;}
+    });
+    return count;
+  }
+
+  const c0=fillDay(rows0,'cvD1');
+  const c1=fillDay(rows1,'cvD2');
+  const c2=fillDay(rows2,'cvD3');
+
+  const total=c0+c1+c2;
+  if(total===0){
+    st.textContent='⚠ Sin datos en el Sheet para esas fechas. Importa los resultados primero.';
+    st.style.color='var(--na)';
+    return;
+  }
+
+  st.textContent=`✓ Cargados: ${f2}(${c2}) · ${f1}(${c1}) · ${f0}(${c0}) loterías`;
+  st.style.color='var(--gr)';
+  toast(`${total} loterías cargadas ✓`,'ok');
+  cvCalc();
+}
+
+function cvBuildInputs(){
+  ['cvD3','cvD2','cvD1'].forEach(day=>{
+    const el=document.getElementById(day);if(!el||el.children.length>0)return;
+    let html='';
+    CV_GROUPS.forEach(grupo=>{
+      html+='<div class="cv-lot-row">';
+      grupo.forEach(code=>{
+        const short=(LN[code]||code).replace('Anguilla','Ang').replace('Haiti Bolet','HB').replace('Haiti','Hai').replace('Lottery','Lot').replace(' Noche','N').replace(' Tarde','T').replace(' Día','D');
+        html+=`<div class="cv-lot-box"><span>${short}</span><input type="text" id="${day}_${code}" placeholder="— — —" maxlength="20"></div>`;
+      });
+      html+='</div>';
+    });
+    el.innerHTML=html;
+  });
+}
+
+function cvGetNums(day){
+  const nums=new Set(),byLot={};
+  CV_GROUPS.flat().forEach(code=>{
+    const el=document.getElementById(day+'_'+code);if(!el)return;
+    const vals=el.value.split(/[\s,\-]+/).map(v=>parseInt(v.trim())).filter(n=>!isNaN(n)&&n>=0&&n<=99);
+    if(vals.length){byLot[code]=vals;vals.forEach(n=>nums.add(n));}
+  });
+  return{nums,byLot};
+}
+
+// Also load from API if available
+async function cvLoadFromSheet(day, fecha){
+  if(!API)return;
+  const d=await apig({action:'resultados',fecha});
+  if(!Array.isArray(d))return;
+  d.forEach(r=>{
+    const el=document.getElementById(day+'_'+r.loteria_code);
+    if(el&&r.n1!==null){
+      const vals=[r.n1,r.n2,r.n3].filter(n=>n!==null&&n!==undefined&&n!=='').map(n=>String(n).padStart(2,'0'));
+      el.value=vals.join(' ');
+    }
+  });
+}
+
+function cvCalc(){
+  const target=document.getElementById('cvLot').value;
+  const d3=cvGetNums('cvD3');
+  const d2=cvGetNums('cvD2');
+  const d1=cvGetNums('cvD1');
+  const el=document.getElementById('cvResult');
+
+  if(d1.nums.size+d2.nums.size+d3.nums.size===0){
+    el.innerHTML='<div class="empty"><p>Ingresa los resultados de al menos 2 días</p></div>';return;
+  }
+
+  // Debug: show what was read
+  const dec9d1=[...d1.nums].filter(n=>n>=90&&n<=99).sort((a,b)=>a-b);
+  const dec9d2=[...d2.nums].filter(n=>n>=90&&n<=99).sort((a,b)=>a-b);
+  const dec9d3=[...d3.nums].filter(n=>n>=90&&n<=99).sort((a,b)=>a-b);
+  const debugInfo=`Leído: Hoy=${d1.nums.size}nums (90s:[${dec9d1}]) | Ayer=${d2.nums.size}nums (90s:[${dec9d2}]) | Ant=${d3.nums.size}nums (90s:[${dec9d3}])`;
+
+  const recent=new Set([...d1.nums,...d2.nums]);
+  const scores=[];
+
+  for(let n=0;n<100;n++){
+    let sc=0;const reasons=[];
+    const inv=(n%10)*10+Math.floor(n/10);
+
+    // Migration pattern
+    const inD1=d1.nums.has(n)&&!(d1.byLot[target]||[]).includes(n);
+    const inD2=d2.nums.has(n)&&!(d2.byLot[target]||[]).includes(n);
+    const inD3=d3.nums.has(n)&&!(d3.byLot[target]||[]).includes(n);
+
+    if(inD1){sc+=4;reasons.push('🟢 Hoy en otras loterías (+4)');}
+    if(inD2){sc+=3;reasons.push('🟡 Ayer en otras loterías (+3)');}
+    if(inD3){sc+=2;reasons.push('⚪ Antes de ayer (+2)');}
+    if(inD1&&inD2){sc+=2;reasons.push('🔥 2 días seguidos migrando (+2)');}
+    if(inD1&&inD2&&inD3){sc+=3;reasons.push('🔥🔥 3 días seguidos migrando (+3)');}
+
+    // Neighbor cerco
+    const vecIzq=[1,2,3].filter(d=>(n-d+100)%100>=0&&recent.has((n-d+100)%100));
+    const vecDer=[1,2,3].filter(d=>(n+d)<=99&&recent.has(n+d));
+    const cerco=vecIzq.length>0&&vecDer.length>0;
+    const totalVec=vecIzq.length+vecDer.length;
+
+    if(cerco){sc+=2;reasons.push(`⭕ Cerco (${vecIzq.map(d=>String(n-d).padStart(2,'0')).join(',')} ← ${String(n).padStart(2,'0')} → ${vecDer.map(d=>String(n+d).padStart(2,'0')).join(',')}) (+2)`);}
+    if(totalVec>=4){sc+=2;reasons.push(`📍 ${totalVec} vecinos activos (+2)`);}
+    else if(totalVec>=2){sc+=1;}
+    if(recent.has((n-1+100)%100)||recent.has(n+1)){sc+=1;reasons.push('👆 Vecino ±1 inmediato (+1)');}
+
+    // Inverso
+    if(inv!==n&&recent.has(inv)){sc+=1;reasons.push(`↔ Inverso ${String(inv).padStart(2,'0')} activo (+1)`);}
+
+    // Pattern 4: Frecuencia del número exacto (cuántas loterías lo tuvieron)
+    // Contar cuántas loterías diferentes tuvieron este número cada día
+    const freqD1=Object.values(d1.byLot).filter(nums=>nums.includes(n)).length;
+    const freqD2=Object.values(d2.byLot).filter(nums=>nums.includes(n)).length;
+    const freqD3=Object.values(d3.byLot).filter(nums=>nums.includes(n)).length;
+    const freqTotal=freqD1+freqD2+freqD3;
+
+    if(freqD1>=3&&freqD2>=2){sc+=5;reasons.push(`🔴 Muy frecuente: ${freqD1} loterías hoy + ${freqD2} ayer (+5)`);}
+    else if(freqD1>=2&&freqD2>=2){sc+=4;reasons.push(`🔴 Frecuente 2 días: ${freqD1} hoy + ${freqD2} ayer (+4)`);}
+    else if(freqD1>=3){sc+=3;reasons.push(`🟠 ${freqD1} loterías hoy (+3)`);}
+    else if(freqD2>=3&&freqD3>=2){sc+=3;reasons.push(`🟠 ${freqD2} ayer + ${freqD3} ant (+3)`);}
+    else if(freqD1>=2){sc+=2;reasons.push(`🟡 ${freqD1} loterías hoy (+2)`);}
+    else if(freqD2>=2){sc+=2;reasons.push(`🟡 ${freqD2} loterías ayer (+2)`);}
+
+    if(freqD1>=1&&freqD2>=1&&freqD3>=1){sc+=2;reasons.push(`📅 3 días seguidos activo (+2)`);}
+    if(freqTotal>=6){sc+=2;reasons.push(`⚡ Alta acumulación: ${freqTotal} apariciones en 3 días (+2)`);}
+
+    // Pattern 5: Familia de decena - pero solo si ES notable vs el promedio
+    // Solo cuenta si la decena tiene MÁS apariciones que el promedio
+    const dec=Math.floor(n/10);
+    const decNums=Array.from({length:10},(_,i)=>dec*10+i);
+    const decFreqD1=decNums.reduce((s,x)=>s+Object.values(d1.byLot).filter(nums=>nums.includes(x)).length,0);
+    const decFreqD2=decNums.reduce((s,x)=>s+Object.values(d2.byLot).filter(nums=>nums.includes(x)).length,0);
+    // Average freq per decena = totalLots*3/10 ≈ 12-13
+    const avgDecFreq=13;
+    const decHot=decFreqD1>avgDecFreq*1.5&&decFreqD2>avgDecFreq*1.5;
+    const decVeryHot=decFreqD1>avgDecFreq*2&&decFreqD2>avgDecFreq*2;
+    const notRecent=freqD1===0;
+
+    if(decVeryHot&&notRecent){sc+=3;reasons.push(`🔴 Decena ${dec*10}s muy caliente y ${String(n).padStart(2,'0')} aún no salió (+3)`);}
+    else if(decHot&&notRecent){sc+=2;reasons.push(`🟠 Decena ${dec*10}s activa y ${String(n).padStart(2,'0')} aún no salió (+2)`);}
+
+    // Penalty: just appeared in same lottery
+    if((d2.byLot[target]||[]).includes(n)){sc=Math.max(0,sc-1);}
+    if((d2.byLot[target]||[]).includes(n)&&(d3.byLot[target]||[]).includes(n)){sc=Math.max(0,sc-2);}
+
+    scores.push({n,sc:Math.max(0,sc),reasons,inv,cerco,inD1,inD2,inD3,totalVec,vecIzq,vecDer,
+                 decHot,decVeryHot,freqD1,freqD2,freqD3,freqTotal});
+  }
+
+  scores.sort((a,b)=>b.sc-a.sc);
+  const maxSc=scores[0]?.sc||1;
+  const hot=scores.filter(s=>s.sc>=8);
+  const warm=scores.filter(s=>s.sc>=5&&s.sc<8);
+  const lotName=LN[target]||target;
+
+  let html=`
+  <div style="background:var(--sf2);border-radius:var(--r);padding:8px 12px;margin-bottom:10px;font-size:11px;color:var(--mu);font-family:var(--mono)">${debugInfo}</div>
+  <div class="pr-sm" style="margin-top:.5rem">
+    <div class="mc mc-ac"><div class="mc-lb">Lotería objetivo</div><div class="mc-vl" style="font-size:13px;padding-top:5px">${lotName.split(' ').slice(-2).join(' ')}</div></div>
+    <div class="mc mc-ro"><div class="mc-lb">Candidatos fuertes</div><div class="mc-vl">${hot.length}</div><div class="mc-sb">score 8+</div></div>
+    <div class="mc mc-na"><div class="mc-lb">Candidatos medios</div><div class="mc-vl">${warm.length}</div><div class="mc-sb">score 5-7</div></div>
+    <div class="mc mc-gr"><div class="mc-lb">Score máximo</div><div class="mc-vl">${maxSc}</div></div>
+  </div>`;
+
+  // Heatmap
+  html+='<div class="cd-t" style="margin-bottom:.5rem">Mapa de calor — convergencia de todos los números</div>';
+  html+='<div class="cv-legend">';
+  [['cv-s0','0'],['cv-s3','3-4'],['cv-s5','5-6'],['cv-s7','7'],['cv-s8','8'],['cv-s10','9+']].forEach(([cls,lbl])=>{
+    html+=`<div class="cv-leg"><div class="cv-leg-box ${cls}"></div>${lbl}</div>`;
+  });
+  html+='</div><div class="cv-grid">';
+
+  const byNum=Array(100);
+  scores.forEach(s=>byNum[s.n]=s);
+  byNum.forEach((s,n)=>{
+    if(!s)return;
+    const sc=Math.min(s.sc,10);
+    html+=`<div class="cv-cell cv-s${sc}" title="${String(n).padStart(2,'0')}: ${s.sc}pts"><span class="cv-cn">${String(n).padStart(2,'0')}</span><span class="cv-cs">${s.sc}</span></div>`;
+  });
+  html+='</div>';
+
+  // Top 10
+  html+='<div class="cd-t" style="margin:.75rem 0 .5rem">Top 10 candidatos para mañana en '+lotName+'</div>';
+  html+='<div style="display:flex;flex-direction:column;gap:7px">';
+  scores.slice(0,10).forEach((s,i)=>{
+    const ns=String(s.n).padStart(2,'0'),is=String(s.inv).padStart(2,'0');
+    const cls=s.sc>=8?'cv-hot':s.sc>=5?'cv-warm':'';
+    const col=s.sc>=8?'var(--ro)':s.sc>=5?'var(--na)':'var(--tx)';
+    const badges=[
+      s.freqD1>=3&&s.freqD2>=2?'<span class="cv-badge cv-b-hot">muy frecuente</span>':'',
+      s.freqD1>=2&&s.freqD2>=2?'<span class="cv-badge cv-b-hot">2 días activo</span>':'',
+      s.freqD1>=2&&!(s.freqD2>=2)?`<span class="cv-badge cv-b-mig">${s.freqD1} lots hoy</span>`:'',
+      s.freqD2>=2&&!(s.freqD1>=2)?`<span class="cv-badge cv-b-mig">${s.freqD2} lots ayer</span>`:'',
+      s.inD1&&s.inD2&&s.inD3?'<span class="cv-badge cv-b-mig">3 días seguidos</span>':'',
+      s.cerco?'<span class="cv-badge cv-b-cerco">cerco bilateral</span>':'',
+      s.totalVec>=4?`<span class="cv-badge cv-b-cerco">${s.totalVec} vecinos</span>`:'',
+      s.decVeryHot?'<span class="cv-badge cv-b-hot">decena caliente</span>':'',
+      s.decHot&&!s.decVeryHot?'<span class="cv-badge cv-b-warm">decena activa</span>':''
+    ].filter(Boolean).join('');
+    html+=`<div class="cv-cand ${cls}">
+      <div class="cv-cand-num" style="color:${col}">${ns}</div>
+      <div style="flex:1">
+        <div style="margin-bottom:4px">${badges}</div>
+        <div style="font-size:11px;color:var(--mu);margin-bottom:3px">Score: <strong style="color:${col}">${s.sc}</strong> · inv ${is} · ${s.totalVec} vecinos activos</div>
+        <div style="font-size:12px;color:var(--tx);line-height:1.6">${s.reasons.join('<br>')}</div>
+      </div>
+    </div>`;
+  });
+  html+='</div>';
+
+  el.innerHTML=html;
+}
+
+function cvEjemplo(){
+  cvBuildInputs();
+  document.getElementById('cvLot').value='ag8a';
+  // Datos REALES: Apr 28 (antes de ayer), Apr 29 (ayer), Apr 30 (hoy sin ag8a)
+  // Apr 30 ag8a salió: 14 84 41 — el 92 salió en H6,LS,ag2p,ag5p,h10 días previos
+  const ex3={Ag10p:"45 52 17",Ag9p:"68 76 77",FLn:"75 95 59",FLt:"05 58 94",GM:"46 74 29",Geev:"85 79 13",Gem:"01 40 93",Gen:"88 98 14",H6:"09 11 41",H7:"16 03 87",KinM:"70 30 91",KinN:"27 56 74",LDOM:"12 49 55",LPd:"47 87 85",LPn:"58 21 38",LS:"52 17 86",LSn:"40 49 45",LT:"57 45 43",Ld:"94 85 12",NC:"59 43 08",NJm:"94 54 98",NJn:"91 95 09",NYn:"58 66 62",NYt:"37 40 38",R:"08 53 08",ag10a:"26 45 73",ag11:"88 60 10",ag12:"85 24 94",ag1p:"06 94 89",ag2p:"21 35 41",ag3p:"50 35 05",ag4p:"36 95 87",ag5p:"97 92 66",ag6p:"04 61 09",ag7p:"88 56 16",ag8a:"92 69 22",ag8p:"15 71 64",ag9a:"83 36 24",h10:"46 73 92",h11:"00 54 25",h5:"80 01 64",h9:"81 84 20"};
+  const ex2={Ag10p:"32 27 87",Ag9p:"09 42 55",FLn:"04 47 24",FLt:"87 03 79",GM:"48 41 78",Geev:"89 52 96",Gem:"12 34 10",Gen:"72 88 53",H6:"92 59 38",H7:"86 16 36",KinM:"64 57 11",KinN:"26 05 99",LDOM:"62 38 10",LPd:"73 97 61",LPn:"68 22 72",LS:"13 92 33",LSn:"72 65 33",LT:"81 11 72",Ld:"64 49 42",NC:"09 64 96",NJm:"84 86 19",NJn:"17 34 14",NYn:"24 87 23",NYt:"52 94 04",R:"09 07 36",ag10a:"42 40 98",ag11:"13 76 19",ag12:"76 27 18",ag1p:"21 47 00",ag2p:"92 98 62",ag3p:"15 33 88",ag4p:"89 28 49",ag5p:"87 30 71",ag6p:"44 06 11",ag7p:"82 68 33",ag8a:"40 83 84",ag8p:"47 27 43",ag9a:"62 63 09",h10:"14 24 18",h11:"42 45 90",h5:"53 55 64",h9:"82 73 27"};
+  const ex1={FLt:"35 39 71",GM:"02 79 06",Geev:"16 60 96",Gem:"98 50 25",H6:"67 76 87",H7:"44 90 63",KinM:"12 51 26",KinN:"99 29 80",LDOM:"21 48 38",LPd:"65 83 18",LPn:"11 54 87",LS:"76 02 28",LSn:"04 40 25",LT:"06 13 15",NJm:"77 51 28",NYt:"91 19 57",R:"58 69 25",ag10a:"05 33 26",ag11:"58 06 21",ag12:"14 58 02",ag1p:"81 78 00",ag2p:"01 12 78",ag3p:"58 15 79",ag4p:"97 80 33",ag5p:"81 63 35",ag6p:"37 00 02",ag7p:"04 57 27",ag8p:"23 41 96",ag9a:"01 33 29",h10:"49 70 49",h11:"18 24 67",h5:"94 40 27",h9:"15 62 22"};
+  Object.entries(ex3).forEach(([c,v])=>{const e=document.getElementById('cvD3_'+c);if(e)e.value=v;});
+  Object.entries(ex2).forEach(([c,v])=>{const e=document.getElementById('cvD2_'+c);if(e)e.value=v;});
+  Object.entries(ex1).forEach(([c,v])=>{const e=document.getElementById('cvD1_'+c);if(e)e.value=v;});
+  cvCalc();
 }
 
 window.addEventListener('DOMContentLoaded',()=>{
